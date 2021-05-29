@@ -1,0 +1,135 @@
+// ! Fonts
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+@import 'config';
+
+// ! CSS Reset
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body {
+   font-family: 'Poppins', sans-serif;
+   background-color: black;
+
+   &::-webkit-scrollbar {
+      width: 1em;
+      border-radius: 10px;
+   }
+
+   &::-webkit-scrollbar-track {
+      box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+   }
+
+   &::-webkit-scrollbar-thumb {
+      background-color: darkgrey;
+      border-radius: 10px;
+   }
+}
+
+img {
+   width: 100%;
+}
+
+@import 'utilites';
+
+// ! Navbar
+nav {
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   height: 3.5em;
+   background-color: #5d4954;
+   color: $light-color;
+
+   a {
+      color: $light-color;
+      text-decoration: none;
+   }
+
+   li {
+      list-style: none;
+   }
+
+   .logo {
+      display: flex;
+      align-items: center;
+
+      img {
+         width: 3em;
+      }
+
+      h4 {
+         text-transform: uppercase;
+         letter-spacing: 5px;
+         font-size: 20px;
+      }
+   }
+
+   .nav-links {
+      display: flex;
+      justify-content: space-around;
+      width: 40%;
+
+      
+      a {
+         letter-spacing: 3px;
+         font-weight: bold;
+         font-size: 15px;
+      }
+   }
+
+   .burger { 
+      display: none;
+      cursor: pointer;
+      
+      div {
+         width: 25px;
+         height: 3px;
+         background-color: $light-color;
+         margin: 5px;
+         transition: all 0.3s ease;
+      }
+   }
+}
+
+/* Home Section */
+#home {
+   display: flex;
+   flex-direction: column;
+   height: 550px;
+   justify-content: center;
+   align-items: center;
+
+   &::before {
+      background: url('../images/bg.jpg');
+      background-position: center;
+      background-size: cover;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 37pc;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      opacity: 0.5;
+   }
+
+   h1 {
+      color:white;
+      text-align: center;
+      font-size: 2rem;
+   }
+
+   p {
+      color:white;
+      text-align: center;
+      font-size: 1.5rem;
+      padding: 0.5rem;
+   }
+}
+
+
+@import 'mobile';
